@@ -349,4 +349,27 @@ height: 169px;
     background-color: #333;
     color: #fff;
 }
+/* giaovien*/
+#header-giaovien{
+height: 169px;
+ background-color: black;
+}
+.nav-giaovien .giaovien-img{
+    text-align: center;
+    background-color: #fff;
+    padding: 18px;
+}
+.nav-giaovien .content-giaovien{
+    color: #fff;
+    text-align: center;
+    line-height: 57px;
+
+}
+#content-giaovienhuongdan .member-iteam-1 {
+    float:left;
+    width: 300%    }
+    #content-giaovienhuongdan .member-iteam-1 .thong-img{
+        border-radius: 4px;
+    }
+
 
