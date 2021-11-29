@@ -1,0 +1,375 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.clear{
+    clear: both;
+}
+#header{
+
+    height: 169px;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+
+}
+
+.content-header{
+    display: inline-block;
+}
+ .content-header{
+    
+}
+#nav .scada-img{
+    text-align: center;
+    background-color: #fff;
+    padding: 18px;
+}
+.content-header > li > a{
+    color: #fff;
+   
+}
+.content-header li{
+    
+    position: relative;
+   
+    
+}
+.content-header .subnav{
+    display: none;
+    position: absolute;
+    background-color: #333;
+    font-size: 14px;
+
+}
+.content-header .subnav a{
+    color:#fff  ;
+    line-height: 38px;
+   
+    
+    
+}
+
+.content-header li a{
+    
+    text-decoration: none;
+    line-height: 52px;
+    padding: 0 15px;
+    display: block;
+    
+}
+.content-header > li{
+    display:inline-block;
+}
+.content-header > li:hover > a{
+    color:#e67833;
+    background-color: #000;
+    
+
+}
+
+.content-header  .subnav  a:hover{
+    
+    color:#e67833;
+    background-color:#333;
+}
+.content-header, .subnav{
+    list-style-type: none;
+}
+ .content-header > li > a{
+    text-transform: uppercase;
+    
+ }
+ .content-header li:hover .subnav{
+     display: block;
+ }
+ .content-header .nav-arrow-down {
+     font-size: 12px;
+ }
+ .content-header .nav-home{
+    font-size: 25px;
+    line-height: 52px;
+ }
+.content-header .nav-instructor{
+   font-size: 18px;
+
+}
+.content-header .nav-team{
+    font-size: 18px;
+    padding: 0 5px;
+    line-height: 52px;
+}
+.content-header .nav-data{
+    font-size: 18px;
+    padding: 0 5px;
+    line-height: 52px;
+}
+
+
+
+ #header .search-btn{
+     float: right;
+     cursor: pointer;
+     padding: 0 22px;
+ }
+ #header .search-icon{
+    color:#fff;
+    font-size: 15px;
+    line-height: 57px;
+ }
+ #header .search-btn:hover{
+     background-color: #f44336;
+ }
+ #slider{
+   margin-top: 150px ;
+   padding-top: 60%;
+   background-image: url('/assets/img1/scada2.jpg');
+   background-position: top center;
+   background-size: cover;
+   background-repeat: no-repeat;
+   height: 500px;
+
+}
+.footer .socials-list{
+    height: 250px;
+    padding-left: 50px;
+    padding-top: 50px;
+    line-height: 2;
+    
+}
+.footer .school{
+    color: #FAA519;
+}
+.footer {
+    background-color: #333;
+    color: #fff;
+}
+
+/*--->> thanhvien */
+#header-team{
+    height: 169px;
+    background-color: black;
+        /* position: fixed;
+    
+    left: 0;
+    right: 0; */
+    /* z-index: 1; */
+
+}
+.nav-team .team-img{
+    text-align: center;
+    background-color: #fff;
+    padding: 18px;
+}
+.nav-team .content-team{
+    color: #fff;
+    text-align: center;
+    line-height: 57px;
+
+}
+#content-team{
+    /* margin-top: 50px; */
+   
+
+
+}
+.content-section-1{
+   
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 40px;
+    
+
+}
+.content-section-1 .member-list-1{
+    float: left;
+    width: 33.33333%;
+}
+.member-list-1 .member-iteam-1{
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+}
+.member-list-1 .lienhe{
+    padding-top: 5px;
+    line-height: 1.4;
+    padding-bottom: 20px;
+    color: #333;
+}
+/* team2 */
+.content-section-2{
+   
+    margin-right: auto;
+    margin-left: auto;
+    
+
+}
+.content-section-2 .member-list-2{
+    float: left;
+    width: 33.33333%;
+}
+.member-list-2 .member-iteam-2{
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  .member-list-2 .lienhe{
+      padding-bottom: 20px;
+     color: #555;
+  }
+  /* team3 */
+  .content-section-3{
+   
+    margin-right: auto;
+    margin-left: auto;
+    
+
+}
+.content-section-3 .member-list-3{
+    float: left;
+    width: 33.33333%;
+}
+.member-list-3 .member-iteam-3{
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  .member-list-3 .lienhe{
+    padding-bottom: 50px;
+    color: #333;
+}
+  #footer-team .socials-list{
+    height: 250px;
+    padding-left: 50px;
+    
+    line-height: 2;
+    
+}
+
+#footer-team {
+    
+    height: 50px;
+}
+#content-team .face{
+    color:  #385898;
+
+}
+#content-team .instagram{
+  color:   #f44336;
+}
+#content-team .email{
+    color: #ce0b0b;
+}
+#content-team .thong-img{
+    border-radius: 10px ;
+}
+#content .lienhe{
+    font-size: 14px;
+    
+}
+#slider-team{
+    height: 200px;
+
+}
+
+/* Dự án */
+#header-project{
+height: 169px;
+    background-color: black;
+}
+.nav-project .project-img{
+    text-align: center;
+    background-color: #fff;
+    padding: 18px;
+}
+.nav-project .content-project{
+    color: #fff;
+    text-align: center;
+    line-height: 57px;
+
+}
+#gioithieu .gioithieu{
+    padding: 20px;
+}
+#gioithieu .comhop-img{
+    margin-left: 15px;
+}
+#gioithieu .content-gioithieu{
+ margin: 15px 40px;
+ line-height: 1.4;
+ text-align: justify;
+ font-size: 15px;
+ font-weight: 500;
+}
+#ungdung .gioithieu-ungdung {
+    padding-top: 20px;
+    padding-bottom: 15px;  
+    padding-left: 20px;
+    }
+#ungdung .content-ungdung{
+    margin: 0px 40px;
+ line-height: 1.4;
+ text-align: justify;
+ font-size: 15px;
+ font-weight: 500;
+
+}
+#tiemnang .gioithieu-tiemnang{
+    padding-top: 20px;
+    padding-bottom: 15px;  
+    padding-left: 20px;
+}
+#tiemnang .content-tiemnang{
+    margin: 0px 40px;
+    line-height: 1.4;
+    text-align: justify;
+    font-size: 15px;
+    font-weight: 500;
+    padding-bottom: 50px;
+}
+.footer-duan .socials-list{
+    height: 250px;
+    padding-left: 50px;
+    padding-top: 50px;
+    line-height: 2;
+    
+}
+.footer-duan .school{
+    color: #FAA519;
+}
+.footer-duan {
+    
+    background-color: #333;
+    color: #fff;
+}
+/* giaovien*/
+#header-giaovien{
+height: 169px;
+ background-color: black;
+}
+.nav-giaovien .giaovien-img{
+    text-align: center;
+    background-color: #fff;
+    padding: 18px;
+}
+.nav-giaovien .content-giaovien{
+    color: #fff;
+    text-align: center;
+    line-height: 57px;
+
+}
+#content-giaovienhuongdan .member-iteam-1 {
+    float:left;
+    width: 300%    }
+    #content-giaovienhuongdan .member-iteam-1 .thong-img{
+        border-radius: 4px;
+    }
+
+
