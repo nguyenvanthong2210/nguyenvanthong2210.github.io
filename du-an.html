@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- MyStyle -->
+    <link rel="stylesheet" href="./css/du-an.css">
+    <!-- Google Font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <!-- ProgressBar -->
+    <script src="./js/circle-progress-master/dist/circle-progress.js"></script>
+    <!-- MQTT -->
+    <script src="./js/mqtt/mqttws31.js"></script>
+    <script src="./js/mqtt/jquery.min.js"></script>
+    <title>Dự án</title>
+</head>
+
+<body>
+    <header>
+        <img src="./images/logo.png" alt="logo">
+    </header>
+    <main>
+        <div class="nav">
+            <span>Dự án</span>
+        </div>
+        <div class="container">
+            <div class="top-content">
+                <div class="group-logo">
+                    <span>Farm IOT</span>
+                    <div class="logo">
+                        <img src="./images/farm.png" alt="Logo">
+                    </div>
+                </div>
+                <div class="panel-sensor">
+                    <div class="sensor">                      
+                        <div class="sensor-temp-progress"></div>
+                        <span>Nhiệt độ (°C)</span>
+                    </div>
+                    <div class="sensor">                      
+                        <div class="sensor-humi-progress"></div>
+                        <span>Độ ẩm không khí (%)</span>
+                    </div>
+                    <div class="sensor">                      
+                        <div class="sensor-moisture-progress"></div>
+                        <span>Độ ẩm đất (%)</span>
+                    </div>
+                </div>
+            </div>
+            <div class="middle-content">
+                <span>Điều khiển</span>
+                <div class="middle-content-control">
+                    <div class="middle-content-control-row">
+                        <div class="middle-content-control-item">
+                            <img id="img-wr" src="./images/pump_stop.png" alt="">
+                            <span>Bơm nước</span>
+                            <div class="middle-content-control-item-btn-group">
+                                <button id="btn-on-water" class="btn-on" >ON</button>
+                                <button id="btn-off-water" class="btn-off">OFF</button>
+                            </div>
+                        </div>
+                        <div class="middle-content-control-item">
+                            <img id="img-mt" src="./images/pump_stop.png" alt="">
+                            <span>Phun sương</span>
+                            <div class="middle-content-control-item-btn-group">
+                                <button id="btn-on-mist" class="btn-on" >ON</button>
+                                <button id="btn-off-mist" class="btn-off">OFF</button>
+                            </div>
+                        </div>
+                        <div class="middle-content-control-item">
+                            <img id="img-fn" src="./images/fan_stop.png" alt="">
+                            <span>Quạt</span>
+                            <div class="middle-content-control-item-btn-group">
+                                <button id="btn-on-fan" class="btn-on" >ON</button>
+                                <button id="btn-off-fan" class="btn-off">OFF</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="middle-content-control-row">
+                        <div class="middle-content-control-item">
+                            <img id="img-gn" src="./images/lightbulb_regular_while.png" alt="">
+                            <span>Đèn vườn</span>
+                            <div class="middle-content-control-item-btn-group">
+                                <button id="btn-on-garden-lights" class="btn-on" >ON</button>
+                                <button id="btn-off-garden-lights" class="btn-off">OFF</button>
+                            </div>
+                        </div>
+                        <div class="middle-content-control-item">
+                            <img id="img-hg" src="./images/lightbulb_regular_while.png" alt="">
+                            <span>Đèn sưởi</span>
+                            <div class="middle-content-control-item-btn-group">
+                                <button id="btn-on-heating-lights" class="btn-on" >ON</button>
+                                <button id="btn-off-heating-lights" class="btn-off">OFF</button>
+                            </div>
+                        </div>
+                        <div class="middle-content-control-item">
+                            <img id="img-he" src="./images/lightbulb_regular_while.png" alt="">
+                            <span>Đèn nhà</span>
+                            <div class="middle-content-control-item-btn-group">
+                                <button id="btn-on-home-lights" class="btn-on" >ON</button>
+                                <button id="btn-off-home-lights" class="btn-off">OFF</button>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <span>Cài đặt</span>
+                <div class="middle-content-setting">
+                    <div class="middle-content-setting-row">
+                        <div class="middle-content-setting-row-title">
+                            <span>Auto/Manual</span>
+                        </div>
+                        <div class="middle-content-setting-row-object">
+                            <input id="auto-man" class="checkbox" type="checkbox" value="true">
+                        </div>
+                    </div>
+                    <div class="middle-content-setting-row">
+                        <div class="middle-content-setting-row-title">
+                            <span>Nhiệt độ chạy quạt (°C)</span>
+                        </div>
+                        <div class="middle-content-setting-row-object">
+                            <input id="temp-run-fan" class="input" type="text" value="0">
+                        </div>
+                    </div>
+                    <div class="middle-content-setting-row">
+                        <div class="middle-content-setting-row-title">
+                            <span>Nhiệt độ bật đèn sưởi (°C)</span>
+                        </div>
+                        <div class="middle-content-setting-row-object">
+                            <input id="temp-run-hg" class="input" type="text" value="0">
+                        </div>
+                    </div>
+                    <div class="middle-content-setting-row">
+                        <div class="middle-content-setting-row-title">
+                            <span>Độ ẩm bật phun sương (%)</span>
+                        </div>
+                        <div class="middle-content-setting-row-object">
+                            <input id="humi-run-mist" class="input" type="text" value="0">
+                        </div>
+                    </div>
+                    <div class="middle-content-setting-row">
+                        <div class="middle-content-setting-row-title">
+                            <span>Nhiệt độ cảnh báo (°C)</span>
+                        </div>
+                        <div class="middle-content-setting-row-object">
+                            <input id="temp-alarm" class="input" type="text" value="0">
+                        </div>
+                    </div>
+                    <div class="middle-content-setting-row">
+                        <div class="middle-content-setting-row-title">
+                            <span>Độ ẩm cảnh báo (%)</span>
+                        </div>
+                        <div class="middle-content-setting-row-object">
+                            <input id="humi-alarm" class="input" type="text" value="0">
+                        </div>
+                    </div>
+                    <div class="middle-content-setting-row row-save">
+                        <button id="btn-save">Save</button>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom-content">
+                <span>Cảnh báo: </span>
+                <span id="alarm">Không có lỗi xảy ra</span>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <span class="name-school">TRƯỜNG ĐẠI HỌC GIAO THÔNG VẬN TẢI THÀNH PHỐ HỒ CHÍ MINH</span>
+        <span class="info"><i class="fas fa-map-marker-alt"></i>Số 2, Đường Võ Oanh, P.25, Q. Bình Thạnh, Thành Phố Hồ
+            Chí Minh</span>
+        <span class="info"><i class="fas fa-envelope"></i>ut-hcmc@ut.edu.vn</span>
+        <span class="info"><i class="fas fa-mobile-alt"></i>02838991373</span>
+    </footer>
+</body>
+<script src="./js/excute-data.js"></script>
+</html>
